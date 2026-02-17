@@ -5,23 +5,7 @@ StockEasy PRO Ultimate - All-in-One 실행 스크립트
 - Streamlit 대시보드 포함
 """
 
-import os
-import sys
-import subprocess
-import importlib
 
-# -------------------------------
-# 1️⃣ 필수 패키지 설치
-# -------------------------------
-required_packages = ["pyupbit", "streamlit", "pandas", "numpy", "requests"]
-
-for pkg in required_packages:
-    try:
-        importlib.import_module(pkg)
-        print(f"{pkg} 이미 설치됨 ✅")
-    except ImportError:
-        print(f"{pkg} 설치 중...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
 
 print("\n모든 패키지 설치 완료 ✅\n")
 
